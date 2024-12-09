@@ -1,0 +1,773 @@
+
+*{
+    box-sizing: border-box;
+    margin:0;
+  
+
+}
+body{
+  background-color: #fff;
+  font-family: 'Monserat', sans-serif;
+  line-height: 1;
+
+}
+.form-inner .error{
+  box-shadow:1px 1px 15px rgb(255 13 13);
+}
+h1{
+    font-size: 60px;
+}
+.margin-bottom-s{
+  margin-bottom: 10px;
+}
+.margin-bottom-m{
+  margin-bottom: 30px;
+}
+.margin-bottom-l{
+  margin-bottom: 60px;
+}
+.margin-bottom-xl{
+  margin-bottom: 180px;
+}
+.margin-top-xl{
+  margin-top: 180px;
+}
+.padding-top-m{
+  padding-top: 30px;
+}
+.padding-bottom-m{
+  padding-bottom: 30px;
+}
+.centr{
+  text-align: center;
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+a{
+  text-decoration: none;
+}
+#header{
+    display: flex;
+    justify-content: space-around;
+   gap:70px;
+   align-items: center;
+   font-size: 20px;
+   color: #ffffff;
+}
+.header-wrap{
+    display: flex;
+   /*background: url("3.jpg") center;*/
+   background-color: #5d2a77;
+   height: 200px;
+   justify-content: space-around;
+   font-size: 20px;
+  color: #000;
+}
+.header-wrap a{
+    color: #000;
+}
+#site-name{
+  display: flex;
+  flex-direction: row;
+}
+#site-name a{
+  font-weight: bold;
+  font-size: 25px;
+  color: #ffffff;
+}
+img.logo{
+  width: 40px;
+}
+.btn,
+.btn:link,
+.btn:visited{
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 15px;
+
+    font-weight: 100;
+    width: 100%;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;
+   
+   
+    margin-top: 15px;
+}
+.btn:hover, .btn:focus {
+ 
+  outline: 0;
+}
+.btn.btn-small{
+  width: 30%;
+}
+.cancelbtn,
+.cancelbtn:link,
+.cancelbtn:visited{
+     font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 15px;
+    border:none;
+    font-weight: 100;
+    width: 20%;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;
+    color: #fff;
+    background-color: #f14141;
+    margin-top: 15px;
+}
+.cancelbtn:hover, .cancelbtn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+/******************************************/
+/*МОДАЛЬНОЕ ОКНО "НАПИСАТЬ НАМ"*/
+/******************************************/
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Style tab links ВКЛАДКИ */
+
+
+/******************************************/
+/* BUTTON MENU*/
+/******************************************/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+      display: flex;
+   
+    justify-content: space-around;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 16%;
+}
+
+.topnav a:hover {
+  background-color: #198754;
+  color: black;
+}
+
+.active {
+  background-color: #198754;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/******************************************/
+/* home-blok1*/
+/******************************************/
+.home-blok1{
+  background-color: #711e90;
+  height: 500px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+.blok1-text{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  font-size: 20px;
+ padding: 10px;
+ gap:25px;
+ margin: 10px;
+ background: rgb(201 201 218 / 10%);
+}
+/******************************************/
+/* Форма поиска*/
+/******************************************/
+
+form {
+  position: relative;
+ 
+  margin: 0 auto;
+}
+.d1 {
+  width: 30%;
+}
+.d1 input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+}
+.d1 button {
+  position: absolute; 
+  top: 5px;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #4caf50;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.d1 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
+/******************************************/
+/* Форма рассчета стоимости*/
+/******************************************/
+.container-forma{
+   right: 0;
+    margin: 10px;
+    /* max-width: 500px; */
+    padding: 10px;
+    background-color: white;
+    color: #333;
+   
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0  0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+.card{
+  max-width: 350px;
+
+}
+
+/******************************************/
+/*home-blok2*/
+/******************************************/
+.home-blok2{
+  text-align: center;
+  margin-top: 20px;
+}
+/* Set a style for the submit button */
+/*.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}*/
+
+/*.btn:hover {
+    opacity: 1;
+}*/
+
+/******************************************/
+/*home-blok3*/
+/******************************************/
+a {
+   text-decoration: none;
+   color: #231E20;
+}
+
+.container-toc {
+   padding: 0 20px;
+}
+
+h1 {
+   margin-bottom: 20px;
+   text-transform: uppercase;
+}
+
+.toc-wrapper {
+   display: table;
+   margin: 0 auto;
+}
+
+.toc {
+   list-style: none;
+   counter-reset: li;
+}
+
+.toc li {
+   position: relative;
+   margin-bottom: 20px;
+   padding-left: 50px;
+   line-height: 28px;
+   transition: .3s linear;
+}
+
+.toc li:last-child {
+   margin-bottom: 0;
+}
+
+.toc li:before {
+   counter-increment: li;
+   content: counters(li, "");
+   position: absolute;
+   top: 50%;
+   margin-top: -14px;
+   left: 0;
+   font-size: 14px;
+   width: 28px;
+   height: 28px;
+   text-align: center;
+   line-height: 28px;
+   color: white;
+   border-radius: 50%;
+   background: #281233;
+}
+
+.toc li:nth-child(2):before,
+.toc li:nth-child(2):after {
+   background: #333
+}
+
+.toc li:nth-child(3):before,
+.toc li:nth-child(3):after {
+   background: #5d2a77;
+}
+
+.toc li:nth-child(4):before,
+.toc li:nth-child(4):after {
+   background: #711e90;
+}
+
+.toc li:nth-child(5):before,
+.toc li:nth-child(5):after {
+   background: #9f45c2;
+}
+
+.toc li:after {
+   content: "";
+   position: absolute;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: rgb(46, 43, 31);
+   top: 50%;
+   left: 34px;
+   margin-top: -4px;
+   opacity: 0;
+   transition: .3s linear;
+}
+
+.toc li:hover:after {
+   opacity: 1;
+}
+
+/******************************************/
+/*home-blok4*/
+/******************************************/
+
+.home-blok4{
+  text-align: center;
+  opacity: 80%;
+
+  padding-top: 20px;
+
+
+}
+.home-blok4 h3{
+  font-size: 25px;
+  color: #5d2a77;
+  padding-top: 20px;
+}
+
+.gradient-text {
+  font-family: 'Rubik One', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #5d2a77 33%, #4CAF50 66%, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+  margin: 20px auto;
+}
+
+/******************************************/
+/*section-featured*/
+/******************************************/
+
+.section-featured{
+    padding: 10px 0 10px 0;
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logos img{
+   width: 200px;
+   
+
+}
+.logos img:nth-child(5){
+    padding-left: 20px;
+    width: 180px;
+    height: 140px;
+}
+.partner-1{
+  transition: all 0.2s;
+}
+.partner-1:hover{
+  background-image: url('../assets/img/logos\ p1.png');
+}
+.container-logo{
+  text-align: center;
+}
+.gradient-all {
+  font-size: 2em;
+  background: linear-gradient(135deg, #5d2a77 20%, #4CAF50 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0.3em 0.6em ;
+  border: 3px solid transparent;
+  border-image: linear-gradient(135deg, #5d2a77 20%, #4CAF50 70%);
+  border-image-slice: 1;
+}
+/******************************************/
+/*FOOTER*/
+/******************************************/
+footer{
+  height: 150px;
+  background-color: #333;
+   display: flex;
+    justify-content: space-around;
+   gap:70px;
+   align-items: center;
+   font-size: 20px;
+   color: #ffffff;
+   /*margin-top: 15px;*/
+}
+img.logo-footer {
+  width: 130px;
+  margin: 5px;
+}
+#site-name{
+  display: flex;
+  align-items: center;
+  gap:15px;
+}
+/******************************************/
+/*СТРАНИЦА О НАС*/
+/******************************************/
+
+.about{
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  font-size: 20px;
+
+}
+.video{
+  margin: auto;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+  background: white;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #5d2a77;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #5d2a77;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #4CAF50;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
+}
+/******************************************/
+/*СТРАНИЦА УСЛУГИ*/
+/******************************************/
+
+.container-img {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container-img img {
+    width: 100%;
+    height: auto;
+}
+
+/*.container-img .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container-img .btn:hover {
+    background-color: black;
+}*/
+.ysligi{
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-row-gap: 15px;
+  grid-column-gap: 35px;
+  align-items: center;
+  justify-content: center;
+}
+/******************************************/
+/*СТРАНИЦА АВТОПАРК */
+/******************************************/
+.container-auto {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container-auto:hover .overlay {
+  opacity: 1;
+}
+.blok-auto{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.autopark{
+   width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.container-auto-img{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  gap:15px;
+  margin: auto;
+}
+/******************************************/
+/*СТРАНИЦА ВОЙТИ*/
+/******************************************/
+.content-avtorization{
+  background-color: #4caf50c9;
+}
+.decor {
+   position: relative;
+   max-width: 400px;
+   margin: 50px auto 0;
+   background: rgb(18 18 18/30%);
+   border-radius: 30px;
+}
+.form-left-decoration, .form-right-decoration {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 20px;
+   background: #5d2a77;
+   border-radius: 20px;
+}
+.form-left-decoration {
+   bottom: 60px;
+   left: -30px;
+}
+.form-right-decoration {
+   top: 60px;
+   right: -30px;
+}
+.form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 20px;
+   border-radius: 30px;
+   background: white;
+}
+.form-left-decoration:before {
+   top: -20px;
+}
+.form-left-decoration:after {
+   top: 20px;
+   left: 10px;
+}
+.form-right-decoration:before {
+   top: -20px;
+   right: 0;
+}
+.form-right-decoration:after {
+   top: 20px;
+   right: 10px;
+}
+.circle {
+   position: absolute;
+   bottom: 80px;
+   left: -55px;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background: rgb(18 18 18/30%);
+}
+.form-inner {
+   padding: 50px;
+}
+.form-inner input, .form-inner textarea {
+   display: block;
+   width: 100%;
+   padding: 0 20px;
+   margin-bottom: 10px;
+   background: #E9EFF6;
+   line-height: 40px;
+   border-width: 0;
+   border-radius: 20px;
+   font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="submit"] {
+   margin-top: 30px;
+   background: #4CAF50;
+   border-bottom: 4px solid #5d2a77;
+   color: white;
+   font-size: 14px;
+}
+.form-inner textarea {
+   resize: none;
+}
+.form-inner h3 {
+   margin-top: 0;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   color: #707981;
+}
+.content-registr{
+  background-color: #711e9033;
+ 
+}
