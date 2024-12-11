@@ -25,7 +25,10 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 8080
 
-# Start PHP-FPM
-CMD ["php-fpm"]
+# Add an environment variable for the port
+ENV PORT=8080
+
+# Use a lightweight web server (e.g., PHP's built-in server) to handle HTTP traffic
+CMD ["php", "-S", "0.0.0.0:8080", "-t", "public"]
