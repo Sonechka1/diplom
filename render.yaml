@@ -7,7 +7,7 @@ services:
       # Установка зависимостей с Composer
       composer install --no-dev --optimize-autoloader
       # Выполнение миграций
-      php artisan migrate --force
+      php artisan migrate 
     startCommand: php-fpm
     region: oregon
     runtime: docker
