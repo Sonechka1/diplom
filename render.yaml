@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: laravel-app
+    env: php
+    plan: free
+    buildCommand: "composer install"
+    startCommand: "php artisan serve --host 0.0.0.0 --port 80"
+    region: oregon
+    runtime: docker
+    envVars:
+      - key: APP_KEY
+        sync: false
+      - key: APP_ENV
+        value: production
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: dpg-ctbgt5pu0jms73f9q1eg-a
+      - key: DB_PORT
+        value: 3306
+      - key: DB_DATABASE
+        value: logistapp_4t23
+      - key: DB_USERNAME
+        value: logistapp
+      - key: DB_PASSWORD
+        value: vuDrDiq8I0ra0GRqL6pLaIKlRSVGhp6o
