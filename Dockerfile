@@ -25,8 +25,6 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
-# Выполняем миграции (используйте переменные окружения для базы данных)
-RUN php artisan migrate 
 
 # Открываем порт 80
 EXPOSE 80
