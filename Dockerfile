@@ -1,7 +1,7 @@
-# Use the official PHP image with necessary extensions
+# Используем официальный образ PHP с нужными расширениями
 FROM php:8.2-fpm
 
-# Install system dependencies
+# Устанавливаем системные зависимости
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -9,28 +9,27 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     && docker-php-ext-install pdo_mysql zip
 
-# Install Composer
+# Устанавливаем Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Set working directory
+# Устанавливаем рабочую директорию
 WORKDIR /var/www
 
-# Copy project files
+# Копируем файлы проекта
 COPY . .
 
-# Install PHP dependencies
+# Устанавливаем PHP-зависимости
 RUN composer install --no-dev --optimize-autoloader
 
+# Устанавливаем права на каталоги storage и cache
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache
+
+# Выполняем миграции (используйте переменные окружения для базы данных)
 RUN php artisan migrate --force
 
-# Set permissions
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+# Открываем порт 80
+EXPOSE 80
 
-# Expose port 80
-EXPOSE 8080
-
-# Add an environment variable for the port
-ENV PORT=8080
-
-# Use a lightweight web server (e.g., PHP's built-in server) to handle HTTP traffic
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "public"]
+# Запускаем PHP-FPM
+CMD ["php-fpm"]
